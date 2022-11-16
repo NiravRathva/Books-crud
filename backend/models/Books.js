@@ -11,8 +11,8 @@ const BooksSchema= new mongoose.Schema({
         required:true
     },
     coverUrl:{
-        type:String,
-        required:true
+        type: Buffer, 
+            required: true
     },
 })
 export default mongoose.model("Books",BooksSchema)

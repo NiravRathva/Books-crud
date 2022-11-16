@@ -9,6 +9,7 @@ const Add = () => {
         desc: "",
         coverUrl: ""
     })
+    
     const handleInput = (e) => {
         setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }))
        
@@ -23,15 +24,21 @@ const Add = () => {
         }
     }
     return (
-        <div className="">
-            <form>
-                <input type="text" placeholder='name' name='name' onChange={handleInput} />
-                <input type="text" placeholder='Description' name='desc' onChange={handleInput} />
-                <input type="file"accept="image/*" placeholder='img' name='coverUrl' onChange={handleInput} />
-
-            </form>
-            <button onClick={handleAdd}>Add</button>
+        <div className="add">
+        <div className="div">
+        <span className="title">Login</span>
+        <form className="form">
+            <label>Name</label>
+            <input className="input" type="text" name="name"onChange={handleInput} placeholder="Enter Book name..." />
+            <label>Desc</label>
+            <input className="input" id="desc"type="text" name="desc"onChange={handleInput} placeholder="Enter Book description..." />
+            <label>Book Cover</label>
+            <input className="input" type="file" onChange={handleInput} name="coverUrl" />
+            <button className="button" onClick={handleAdd}>Add</button>
+        </form>
+        
         </div>
+    </div>
     )
 }
 
