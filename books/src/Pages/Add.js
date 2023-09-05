@@ -26,7 +26,7 @@ const Add = () => {
     return (
         <div className="add">
         <div className="div">
-        <span className="title">Login</span>
+        <span className="title">Add Book</span>
         <form className="form">
             <label>Name</label>
             <input className="input" type="text" name="name"onChange={handleInput} placeholder="Enter Book name..." />

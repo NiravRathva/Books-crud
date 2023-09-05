@@ -5,9 +5,9 @@ import booksRoutes from "./Routes/Books.js"
 import cors from "cors"
 
 const app =express()
-const port =8800
 
 dotenv.config();
+const port =process.env.PORT || 8800
 // conncting to database
 const connectToMongo = () => {
   mongoose.connect(process.env.MONGO).then(() => {
