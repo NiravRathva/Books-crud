@@ -22,7 +22,7 @@ const Update = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:8800/api/books/${bookId}`, input);
+      const res = await axios.put(`https://books-ik9q.onrender.com/api/books/${bookId}`, input);
 
       navigate("/");
     } catch (error) {

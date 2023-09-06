@@ -17,7 +17,7 @@ const Add = () => {
     const handleAdd = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8800/api/books", input)
+            await axios.post("https://books-ik9q.onrender.com/api/books", input)
             navigate("/");
         } catch (error) {
 
